@@ -1,0 +1,3 @@
+/*
+Advanced Texture Class for SDL
+*/
