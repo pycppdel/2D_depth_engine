@@ -1,6 +1,5 @@
 
 #include "texture.h"
-#include <iostream>
 /*
 cpp file for texture
 */

@@ -45,9 +45,9 @@ public:
   void rotate(int);
   int set_rotation_angle(int);  // gives back old angle
   uint8_t set_alpha(uint8_t);
-  Color& set_color_mod(Color&);
-  SDL_Rect& set_clip_rect(SDL_Rect&);
-  SDL_Rect& set_render_rect(SDL_Rect&);
+  Color* set_color_mod(Color*);
+  SDL_Rect* set_clip_rect(SDL_Rect*);
+  SDL_Rect* set_render_rect(SDL_Rect*);
 
   void draw();
 
