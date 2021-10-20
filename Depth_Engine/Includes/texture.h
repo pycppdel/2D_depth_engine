@@ -20,7 +20,7 @@ SDL needs to be included first
 
 class Texture{
 
-private:
+public:
 
 std::string path;
 SDL_Renderer* render;

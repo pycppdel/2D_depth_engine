@@ -1,7 +1,11 @@
 #include "SDL_ALL.h"
 #include "utils.h"
-#include "texture.h"
 #include <iostream>
+#include <vector>
+#include "texture.h"
+
+Texture t;
+SDL_Texture* texture;
 
 void draw(struct Display*);
 
@@ -11,6 +15,18 @@ int main(){
   manager.init("F");
   manager.setDrawMethod(draw);
   bool quit = false;
+  t.load_image("Unbenannt.png", manager.getDisplay()->renderer);
+
+
+  SDL_Surface* s = IMG_Load(const_cast<char*>("Unbenannt.png"));
+
+  //making texture
+  texture = SDL_CreateTextureFromSurface(manager.getDisplay()->renderer, s);
+
+  SDL_FreeSurface(s);
+
+  SDL_SetTextureBlendMode(texture, SDL_BLENDMODE_BLEND);
+
 
 
   SDL_Event e;
@@ -40,5 +56,8 @@ void draw(struct Display* display){
 
   SDL_RenderClear(r);
   SDL_SetRenderDrawColor(r, 0xFF, 0xFF, 0xFF, 0xFF);
+
+  SDL_RenderCopy(r, texture, NULL, NULL);
+
   SDL_RenderPresent(r);
 }

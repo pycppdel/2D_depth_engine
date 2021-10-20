@@ -13,10 +13,10 @@ container class for colors
 class Color{
 
 public:
-uint8_t color[4];
+uint8_t color[3];
 
 Color();
-Color(uint8_t, uint8_t, uint8_t, uint8_t);
+Color(uint8_t, uint8_t, uint8_t);
 ~Color();
 
 
