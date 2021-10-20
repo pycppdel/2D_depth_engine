@@ -87,17 +87,17 @@ uint8_t Texture::set_alpha(uint8_t a){
   return 0;
 }
 
-Color& Texture::set_color_mod(Color& c){
+Color* Texture::set_color_mod(Color& c){
 
   return Color(0, 0, 0, 0);
 }
 
-SDL_Rect& Texture::set_clip_rect(SDL_Rect& clip){
+SDL_Rect* Texture::set_clip_rect(SDL_Rect& clip){
 
   return SDL_Rect();
 }
 
-SDL_Rect& Texture::set_render_rect(SDL_Rect& r){
+SDL_Rect* Texture::set_render_rect(SDL_Rect& r){
 
   return SDL_Rect();
 }
