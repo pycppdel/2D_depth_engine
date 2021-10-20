@@ -1,4 +1,0 @@
-/*
-Advanced Texture Class for SDL
-SDL needs to be included first
-*/
