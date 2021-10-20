@@ -65,6 +65,12 @@ Texture::Texture(SDL_Renderer* r, std::string p, SDL_Rect* clip, SDL_Rect* rerec
 
 Texture::~Texture(){
 
+  delete clip_rect;
+  delete rerect;
+
+  SDL_Destroy(texture);
+
+
 }
 
 void Texture::rotate(int angle){
@@ -94,6 +100,15 @@ SDL_Rect& Texture::set_clip_rect(SDL_Rect& clip){
 SDL_Rect& Texture::set_render_rect(SDL_Rect& r){
 
   return SDL_Rect();
+}
+
+void Texture::load_image(std::string p, SDL_Renderer* r){
+
+path = p;
+render = r;
+
+load_texture(p, r);
+
 }
 
 void Texture::draw(){

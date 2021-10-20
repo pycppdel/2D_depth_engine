@@ -48,6 +48,7 @@ public:
   Color* set_color_mod(Color*);
   SDL_Rect* set_clip_rect(SDL_Rect*);
   SDL_Rect* set_render_rect(SDL_Rect*);
+  void load_image(std::string, SDL_Renderer*);
 
   void draw();
 
